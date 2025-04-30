@@ -1,0 +1,189 @@
+*,html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.next {
+    position: absolute;
+    animation: atas 1s ease-out forwards;
+    font-size: 2em;
+    color: black;
+    bottom: -500px;
+    right: 30px; 
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+@keyframes atas {
+    100%{
+        bottom: 50px;
+    }
+}
+
+.next:hover {
+    color: rgb(172, 169, 169);
+    text-shadow: 0px 0px 17px rgb(0, 0, 0);
+}
+
+.prev {
+    position: absolute;
+    animation: atas 1s ease-out forwards;
+    font-size: 2em;
+    color: black;
+    bottom: -500px;
+    left: 30px; 
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+@keyframes atas {
+    100%{
+        bottom: 50px;
+    }
+}
+
+.prev:hover {
+    color: rgb(172, 169, 169);
+    text-shadow: 0px 0px 17px rgb(0, 0, 0);
+}
+
+@keyframes geserKeBawah {
+    100% { top: 100px; }
+}
+
+.judul, .judul1 {
+    animation: geserKeBawah 1s ease-in-out forwards;
+    position: absolute;
+    top: -1000px;
+}
+
+.judul {
+    left: 670px;
+    animation-delay: 0s;
+}
+
+.judul1 {
+    left: 780px;
+    animation-delay: 0.2s;
+}
+
+.wrapper , .wrapper-masuk {
+    animation: masuk 1s ease-out 1s forwards;
+}
+
+@keyframes masuk {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.wrapper {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    width: 330px;
+    height: 350px;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 4px 10px 13px rgba(0, 0, 0, 0.559) , inset 4px 10px 13px rgba(0,0,0, 0.559);
+    transition: all .3s ease-in-out;
+}
+
+.wrapper:hover {
+    box-shadow: 0px 0px 7px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(234, 234, 234);
+}
+
+.header {
+    font-size: 1.69em;
+    margin-bottom: 15px;
+}
+
+#umur {
+    width: 260px;
+    height: 38px;
+    font-size: 1.1em;
+    border: 2px solid rgba(0,0,0,.5);
+    border-radius: 5em;
+    padding-left: 10px;
+    box-shadow: inset 3px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#umur:focus {
+    box-shadow: inset 3px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#umur::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: .5;
+    font-weight: bold;
+}
+
+.click {
+    width: 140px;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: all .2s linear; 
+    cursor: pointer;
+}
+
+.click:hover {
+    box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    border: 1px solid white;
+}
+
+.answer {
+    font-size: 1.5em;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+} .answerr {
+    font-size: 1.5em;
+    position: absolute;
+    left: 150px;
+    bottom: 50px;
+}
+
+#reset {
+    position: absolute;
+    bottom: 50px;
+    left: 46%;
+    width: 140px;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: all .2s linear; 
+    cursor: pointer;
+}
+
+#reset:hover {
+    box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    border: 1px solid white;
+}
